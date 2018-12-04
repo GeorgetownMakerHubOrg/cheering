@@ -1,5 +1,7 @@
 //Code Begin
 
+
+// this part gets the sesnsor data
 const int SensorSignal = 7; // define integer SensorSignal with value 2 , this is the signal output (S, or OUT) from your sensor (can be any sensor)
 const int ledPin = LED_BUILTIN;  // define integer ledPin with value 13 
 int sensorValue = 0;
@@ -17,6 +19,7 @@ void loop(){
   if(sensorValue != previousValue){ 
     if (sensorValue == HIGH) { digitalWrite(ledPin, HIGH); // set pin 13 (ledPin) according to the value on pin 2
       Serial.println("motion");
+      triggerCheer();
     } 
     else { digitalWrite(ledPin, LOW); 
       Serial.println("still");
@@ -25,4 +28,13 @@ void loop(){
   previousValue = sensorValue; 
   delay(100);
 }
+
+
+void triggerCheer(){
+
+
+  
+}
+
+
 //code End
